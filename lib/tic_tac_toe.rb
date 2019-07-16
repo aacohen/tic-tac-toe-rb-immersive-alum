@@ -104,16 +104,9 @@ def winner(board)
   end
 end
 
-#def play(board)
-#  turn(board)
-#  draw?(board)
-#  input = gets
-#end
 
 def play(board)
-  loop_count = 0
-  until loop_count == 9
+  until over?(board) == true
     turn(board)
-    loop_count +=1
   end
 end
