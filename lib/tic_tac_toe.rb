@@ -116,5 +116,6 @@ def play(board)
       puts "Cat's Game!"
       breaks
     end
+    end
   end
 end
