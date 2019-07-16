@@ -47,10 +47,8 @@ def turn(board)
   if won?(board)
     winner = winner(board)
     puts "Congratulations #{winner}!"
-    break
   else if draw?(board)
     puts "Cat's Game!"
-    break
   end
   end
 end
