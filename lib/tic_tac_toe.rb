@@ -108,8 +108,13 @@ def play(board)
   until loop_count == 9
     turn(board)
     loop_count +=1
-    if won?(board) || draw?(board)
-      return
+    if won?(board)
+      winner = winner(board)
+      puts "Congratulations #{winner}!"
+      break
+    else if draw?(board)
+      puts "Cat's Game!"
+      break
     end
   end
 end
