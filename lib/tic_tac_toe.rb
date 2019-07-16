@@ -108,5 +108,8 @@ def play(board)
   until loop_count == 9
     turn(board)
     loop_count +=1
+    if won?(board) || draw?(board)
+      return
+    end
   end
 end
