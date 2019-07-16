@@ -76,7 +76,7 @@ board.none?{ |i| i == " "}
 end
 
 def draw?(board)
-  if full?(board) && !(won?(board))
+  if (full?(board)) && !(won?(board))
     return true
   else if (!(full?(board)) && !(won?(board))) #|| !(full?(board))
     return false
