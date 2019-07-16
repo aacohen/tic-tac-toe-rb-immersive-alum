@@ -44,6 +44,15 @@ def turn(board)
   else
     turn(board)
   end
+  if won?(board)
+    winner = winner(board)
+    puts "Congratulations #{winner}!"
+    breaks
+  else if draw?(board)
+    puts "Cat's Game!"
+    breaks
+  end
+  end
 end
 
 def turn_count(board)
@@ -108,14 +117,5 @@ def play(board)
   until loop_count == 9
     turn(board)
     loop_count +=1
-    if won?(board)
-      winner = winner(board)
-      puts "Congratulations #{winner}!"
-      breaks
-    else if draw?(board)
-      puts "Cat's Game!"
-      breaks
-    end
-    end
   end
 end
